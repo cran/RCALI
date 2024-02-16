@@ -26,10 +26,12 @@ califlopp(file, dispf=c(1,2), param=NULL, resfile = NULL)
     in \emph{Soubeyrand and all}, 5 for a discontinuous function.\cr
     These functions are viewable in the C file \code{src/functions.cc}.
     To modify them, see Details.}
-   \item{    If vector of functions, the dispersion functions are coded in R
+      \item{    If vector of functions, the dispersion functions are coded in R
     (more time consuming than compiled version). Two R dispersal functions are provided,  \code{\link{fpollen}} and
     \code{\link{fseed}}, the functions used in Genesys.
-    To specify your own function, see details.}}}
+    To specify your own function, see details.}
+    }
+  }
 
   \item{param}{ Optional list of parameters. Valid components are
     \code{input}, \code{output},
@@ -60,7 +62,7 @@ califlopp(file, dispf=c(1,2), param=NULL, resfile = NULL)
   or not, but  without holes. The first line contains the number of polygons.
   The following lines depend of the \code{input}
   parameter:
-  \itemize{
+  \describe{
   \item{\code{input=1}}{ Two lines per polygon: on the first one,
     an identifier (a positive
     integer),   followed by the x-coordinates,
@@ -71,13 +73,14 @@ califlopp(file, dispf=c(1,2), param=NULL, resfile = NULL)
     an identifier (a positive
     integer),   followed by a name for the polygon and
     by the number of its vertices, on the second one, the x-coordinates,
-    and on the third one, the y-coordinates.}}
+    and on the third one, the y-coordinates.}
+  }
 
   \bold{The individual dispersion functions}
   
   The individual dispersion functions can  either be compiled
   or R functions.
-\itemize{
+\describe{
 
 \item{
   \emph{Compiled function:}}{ Five compiled dispersal functions are
@@ -135,7 +138,7 @@ by using the standard R commands \code{R CMD build} and
   \bold{The parameters}
 
   The argument \code{param} is a list which valid components are:
-  \itemize{
+  \describe{
   \item{\code{input}}{ format of the polygons-file. 1 or 2 (see above).
   Default 2}
   \item{\code{output}}{ output required  on the screen:
@@ -171,7 +174,7 @@ Default 1}
    for functions number 1 to 5, respectively.}}
    
    In addition, when \code{method}  is \code{cub}:
-   \itemize{
+   \describe{
      \item{\code{maxpts}}{ maximal
      number of evaluation points required for each function.
      Vector of length equal to the number of required functions.
@@ -197,7 +200,7 @@ at the origin. Default in a standard configuration: 0,1,0,0,0
    for functions number 1 to 5, respectively.}}
     
     When  \code{method} is \code{grid}:
-\itemize{
+\describe{
     \item{\code{seed}}{ seed of the random generator.}
     \item{\code{step}}{ step of the grid on the x-axis and on the y-axis
       in meter. Vector of length 2.}
@@ -210,7 +213,7 @@ at the origin. Default in a standard configuration: 0,1,0,0,0
 
     
     Its contains, when the method is \code{cub},
-    \itemize{
+    \describe{
       \item{ on the first line:}{ "npoly:",	"input-file:",
       "nfunc:",	"method:", each of these identifiers
       followed by the actual values.
@@ -227,7 +230,7 @@ at the origin. Default in a standard configuration: 0,1,0,0,0
 	number of evaluations.}}
 
       Its contains, when the method is \code{grid},
-      \itemize{
+      \describe{
 	\item{ on the first line:}{ "npoly:",	"input-file:",
       "nfunc:",	"method:", "stepx:", "stepy:", each of these identifiers
       followed by the actual values.

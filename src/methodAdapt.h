@@ -31,7 +31,7 @@ private:
 
 
   real abser[MAX_NFUNCTIONS];	// the output absolute precisions
-  unsigned long nbeval[MAX_NFUNCTIONS];	// the output number of evaluations
+  int nbeval[MAX_NFUNCTIONS];	// the output number of evaluations
   Boolean pasatteint[MAX_NFUNCTIONS];	// True when the max number of evaluations is reached
   tPolygond octo[MAX_NFUNCTIONS];	// octogone centered in 0,0, surrounding the maximal distance
   tPolygoni octoi[MAX_NFUNCTIONS];	// version with integers

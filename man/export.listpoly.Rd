@@ -11,7 +11,7 @@
   \code{1} when used as input to  \link{califlopp}.
 }
 \usage{
-export.listpoly(x, filename)
+  \method{export}{listpoly}(x, filename)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

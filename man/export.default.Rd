@@ -6,7 +6,7 @@
 Default method \code{export}
 }
 \usage{
-export.default(x, filename)
+  \method{export}{default}(x, filename)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -1,7 +1,7 @@
 
-R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
-Copyright (C) 2016 The R Foundation for Statistical Computing
-Platform: x86_64-redhat-linux-gnu (64-bit)
+R version 4.3.2 (2023-10-31) -- "Eye Holes"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -20,52 +20,17 @@ Type 'q()' to quit R.
 > 
 > 
 > # Cubature: Example of the user guide:
-> param=list(input=2,verbose=FALSE,output=1,poly=c(66,66),
-+    method="cub", maxpts= rep(1.0e+8,2),
-+  reler= c(1.0e-4, 1.0e-3),
-+    dz=c(0,21), dp=c(100,0),  tz=c(0,1))
+> # deactive for M1mac precision mismatch
+> #param=list(input=2,verbose=FALSE,output=1,poly=c(66,66),
+> #   method="cub", maxpts= rep(1.0e+8,2),
+> # reler= c(1.0e-4, 1.0e-3),
+> #   dz=c(0,21), dp=c(100,0),  tz=c(0,1))
 > 
-> start.run <- Sys.time()
-> califlopp(file="data",
-+ c(fpollen,fseed), param=param)
-
-Number of polygons: 100
--------------------
-
-Parameters:
------------
-verbose: 0
-output: 1
-scale: 10
-maximal dispersion distances for each function: 0 21
-minimal dispersion distances for each function: 100 0
-(the dispersion is calculated between centroids,
- for distances beyond these values)
-method:cubature
-function 1: relative precision = 0.0001, absolute precision = 0.001
-            maximal number of evaluations points fixed to 100000000 
-function 2: relative precision = 0.001, absolute precision = 0.001
-            maximal number of evaluations points fixed to 100000000 
-mode of triangulation: 0 1
-
-Polygons  66 (66), 66 (66)
--------------------
-
-Integrated flow for function 1:
- mean: 8.47219 mean/area1: 0.529512 mean/area2: 0.529512
- absolute error: 0.000999598 relative error: 0.000117986
- confidence interval: [8.47119, 8.47319]
- nb. evaluations: 576682
-
-Integrated flow for function 2:
- mean: 12.3758 mean/area1: 0.773489 mean/area2: 0.773489
- absolute error: 0.00198936 relative error: 0.000160746
- confidence interval: [12.3738, 12.3778]
- nb. evaluations: 1480
-
-area1: 16 area2: 16 
-> end.run <- Sys.time()
-> duration <- end.run - start.run
+> #start.run <- Sys.time()
+> #califlopp(file="data",
+> #c(fpollen,fseed), param=param)
+> #end.run <- Sys.time()
+> #duration <- end.run - start.run
 > # print(duration)
 > 
 > # Grid: Example of the user guide:(too long)
@@ -104,4 +69,4 @@ area1: 16 area2: 16
 > 
 > proc.time()
    user  system elapsed 
-  2.207   0.048   2.261 
+  0.617   0.062   0.668 

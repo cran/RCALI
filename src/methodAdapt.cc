@@ -394,9 +394,9 @@ methodAdapt::Print (const int poutput, const real areac, const real aread)
 
 	  Rprintf ("\nIntegrated flow for function %d:\n",
 		  this->ifunct[ifunc]);
-	  Rprintf (" mean: %g mean/area1: %g mean/area2: %g\n",
-		  this->rp[ifunc], (this->rp[ifunc] / areacc),
-		  (this->rp[ifunc] / areadd));
+	  Rprintf (" mean: %.6g mean/area1: %.6g mean/area2: %.6g\n",
+		  (double)this->rp[ifunc], (double)(this->rp[ifunc] / areacc),
+		  (double)(this->rp[ifunc] / areadd));
 
 	  if ((poutput == ALL) && (this->nbeval[ifunc] > 0))
 	    {
@@ -406,11 +406,11 @@ methodAdapt::Print (const int poutput, const real areac, const real aread)
 		Rprintf ("*");
 
 	      Rprintf
-		(" absolute error: %g relative error: %g\n confidence interval: [%g, %g]\n",
-		 this->abser[ifunc], (this->abser[ifunc] / this->rp[ifunc]),
-		 (this->rp[ifunc] - amplip), (this->rp[ifunc] + amplip));
+		(" absolute error: %.6g relative error: %.6g\n confidence interval: [%.6g, %.6g]\n",
+		 (double)this->abser[ifunc], (double)(this->abser[ifunc] / this->rp[ifunc]),
+		 (double)(this->rp[ifunc] - amplip), (double)(this->rp[ifunc] + amplip));
 	      if (poutput == ALL)
-		Rprintf (" nb. evaluations: %ld\n", this->nbeval[ifunc]);
+		Rprintf (" nb. evaluations: %i\n", (int)this->nbeval[ifunc]);
 	    }
 	}			// end ifunc
 
@@ -1016,7 +1016,7 @@ resxp = (*dispf[this->ifunct[ifunc] - 1]) (lepoint);
 
 	      this->rp[ifunc] = lAdapt.GetResult0 ();
 	      this->abser[ifunc] = lAdapt.GetAbserr0 ();
-	      this->nbeval[ifunc] = lAdapt.GetNeval ();
+	      this->nbeval[ifunc] = (int)lAdapt.GetNeval ();
 
 
 
