@@ -23,7 +23,7 @@
 
 #define NEW(p, type)\
   if ((p=(type *) malloc (sizeof(type)))==NULL) {\
-  error ("NEW: Out of Memory!\n");\
+  Rf_error ("NEW: Out of Memory!\n");\
 }
 
 
@@ -77,7 +77,7 @@ This should abort in this case, not convert into unsigned */
   vect = (type *) calloc (n0, sizeof (type)); \
   if (vect == NULL) \
     { \
-      error( "CREER_T1: Memory allocation problem\n");	\
+      Rf_error( "CREER_T1: Memory allocation problem\n");	\
     } \
   }
 
@@ -86,7 +86,7 @@ This should abort in this case, not convert into unsigned */
   mat = (type **) calloc (n0, sizeof (type *)); \
   if (mat == NULL) \
     { \
-      error( "CREER_T2: Memory allocation problem\n");	\
+      Rf_error( "CREER_T2: Memory allocation problem\n");	\
     } \
   }
 
@@ -96,7 +96,7 @@ This should abort in this case, not convert into unsigned */
   tab = (type ***) calloc (n0, sizeof (type **)); \
   if (tab == NULL) \
     { \
-     error( "CREER_T3: Memory allocation problem\n");	\
+     Rf_error( "CREER_T3: Memory allocation problem\n");	\
     } \
   }
 
@@ -107,7 +107,7 @@ This should abort in this case, not convert into unsigned */
   vect = (type *) realloc ((char *)vect,  n0*sizeof(type)); \
   if (vect == NULL) \
     { \
-      error( "RECREER_T1: Memory allocation problem\n");	\
+      Rf_error( "RECREER_T1: Memory allocation problem\n");	\
     } \
   }
 

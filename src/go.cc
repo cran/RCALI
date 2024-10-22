@@ -57,7 +57,7 @@ verifNumPoly (int numPoly, char *moi, char *errmess)
 
   if (ERR_POLY != 0)
     {
-      warning( "Fatal error on polygon %d.\n", -numPoly);
+      Rf_warning( "Fatal error on polygon %d.\n", -numPoly);
       // Also warn on  stdout
       Rprintf ("Execution stops because the polygon %d is erroneous.\n",
 	      -numPoly);

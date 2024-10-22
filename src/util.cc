@@ -82,7 +82,7 @@ ecrmess (int code, char *moi, char *mess, Boolean fatal)
     }
 
   if (fatal == True)
-    error("Fatal error");
+    Rf_error("Fatal error");
   else
     return (code);
 }				/* end ecrmess */

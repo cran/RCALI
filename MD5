@@ -1,4 +1,4 @@
-d3382405fbc2124aba686e18474419a1 *DESCRIPTION
+688afe902a0bbbad854eb866d09bf946 *DESCRIPTION
 05f4e61fc40bf98314b3b8cd4afa4e9a *LICENSE.note
 1afeff3ca4dc90e5afb12bcf8f379bd7 *NAMESPACE
 e107920d2e28f05ea417f285e4cc4011 *R/califlopp.R
@@ -54,7 +54,7 @@ f532aed398a00ffb42f5c1e26c58ee2c *src/Vector.cc
 f2b69a2dd4ef3f7d14d486c5a88bb062 *src/calidefs.h
 95e7d684430b41e8cd46054685a18ed4 *src/calierror.h
 6ef1ebd698e86666b8103a161cb467ad *src/califunc.h
-aaf6ec06c6b3245072e49c2de0bddc8f *src/calimacros.h
+894453414d50cc139bf4d1330a7b141c *src/calimacros.h
 630f7a01cba13ed1fd0f2493a7b9d1b1 *src/calireal.h
 a6c96782146fdfeb878847221a782c25 *src/calitypes.h
 a45e0109e089911e3a4c3b2d0b586595 *src/crConvexSp.cc
@@ -64,13 +64,13 @@ f4f9fe0aa78b990f70934b457c2e8366 *src/fluxsd.cc
 470c7ced7769dbf5770574e9b5e08a6f *src/functions.h
 71948dbcc763328fed990896deb4219d *src/geom.cc
 7befabe4f57827b9f7cd147d32a7d22c *src/geom.h
-314a22cc345eb368e3bad0742becb34a *src/go.cc
+71bdd82290b56a0ae90a086de5f62a6d *src/go.cc
 01e48af7d9fba1275058a5c331d781a9 *src/go.h
 da0c22fca0999f7646a3f2d1f882f6cc *src/intersection.cc
 078f8ff8101a8c3a579d951709a5720b *src/intersection.h
-cc3c476db8b0093fc75c97fe72026db1 *src/methodAdapt.cc
+3059b351d94ad21dae71ce759545c9c7 *src/methodAdapt.cc
 f2f25869ce2b410bb5e308ceef9397a4 *src/methodAdapt.h
-ceabe3dab87ee8f4cc804637b6fdde5c *src/methodGrid.cc
+60d5469d45068d91b679ac525c8cff17 *src/methodGrid.cc
 6d0c084f1727fd942730ac230e2c268c *src/methodGrid.h
 6b2cae6f45aabe1d2e2b38a8c03944d3 *src/methodIntegr.h
 6e3d9f4f6853b227fde559d8f7edee51 *src/mt19937ar.cc
@@ -78,9 +78,9 @@ ceabe3dab87ee8f4cc804637b6fdde5c *src/methodGrid.cc
 1c510785b35494d62c0cd48ed676efb6 *src/quantiles.cc
 c7c034f088c7a7fad2719c92a653d099 *src/read1Poly.cc
 ac9d2085a97d7ad2c5edc2a4b82872bd *src/read1Poly.h
-b1e2dbf38876cd4b97d490195f8f3c7c *src/readPoly.cc
+717ae02e87826043c60a3359b3b2fa21 *src/readPoly.cc
 3ac02567ac3151beca0122970279c1ab *src/readPoly.h
-04fafa3def454a915c6d61b2274e02f4 *src/util.cc
+7de7609180bf54209f6cb5428ee21280 *src/util.cc
 cc8963202f14c0a8af3f23d42cd7def7 *src/util.h
 55b06dba31a534ecd6be32860d84a902 *src/writeDebug.cc
 d94d719d831fbee69be820376cfe079c *src/writeDebug.h
@@ -100,7 +100,6 @@ ee0e99969b0d1ab27f6847156a6e4172 *tests/data
 4b8e90a1cc9c87818f42955a49286615 *tests/dispseed.Rout.save
 d0add47142186fff059944eaf9b53ada *tests/fdispersions.R
 0c03de8dca6a70ca09d9ea8230c0dd08 *tests/fdispersions.Rout.save
-d41d8cd98f00b204e9800998ecf8427e *tests/out.out
 d5f865eb843bbf96cc7453b79fcc0471 *tests/paysage.R
 526264945469d05b9bbe7d5a8bd01a6c *tests/paysage.cubres
 7ac364584c00cc3259e334f996be7fb5 *tests/paysage.data

@@ -476,12 +476,12 @@ methodGrid::Integration (  int *dispfc, Function *pfunction,
       // dispfc[0] ==0: dispersal functions in R
 	      if (dispfc[0] ==0) {
 		  f=SEXP(functn[ifunc]);
-		    PROTECT(args=allocVector(REALSXP, (2)));
+		    PROTECT(args=Rf_allocVector(REALSXP, (2)));
 	      REAL(args)[0]=mont.dist0()/SCALE;
 	      REAL(args)[1]=mont.angle0();
   /* Invoke the R function */
-  PROTECT(callsxp=lang2( f, args));
-  PROTECT(resultsxp=eval(callsxp,rho));
+  PROTECT(callsxp=Rf_lang2( f, args));
+  PROTECT(resultsxp=Rf_eval(callsxp,rho));
   resxp = REAL(resultsxp)[0];
   UNPROTECT(3);
 	      } else 
@@ -603,12 +603,12 @@ methodGrid::CalcR (const int poutput, int *dispfc,
 	      this->methcalcul[ifunc] = False;
       // dispfc[0] ==0: dispersal functions in R
 	      if (dispfc[0] ==0) {
-	      PROTECT(args=allocVector(REALSXP, (2)));
+	      PROTECT(args=Rf_allocVector(REALSXP, (2)));
 	      REAL(args)[0]=lepoint.dist0()/SCALE;
 	      REAL(args)[1]=lepoint.angle0();
   /* Invoke the R function */
-  PROTECT(callsxp=lang2( f, args));
-  PROTECT(resultsxp=eval(callsxp,rho));
+  PROTECT(callsxp=Rf_lang2( f, args));
+  PROTECT(resultsxp=Rf_eval(callsxp,rho));
   resxp = REAL(resultsxp)[0];
   UNPROTECT(3);
 	      }

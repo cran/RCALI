@@ -112,12 +112,12 @@ f_ (const Point & p, int nfun, int polya, int polyb, Vector funvls)
       while (pointer != intersection);
 // dispfci ==0: dispersal functions in R
 	      if (dispfci ==0) {
-  PROTECT(args=allocVector(REALSXP, (2)));
+  PROTECT(args=Rf_allocVector(REALSXP, (2)));
   REAL(args)[0]=p.dist0 ()/SCALE;
   REAL(args)[1]=p.angle0 ();
   /* Invoke the R function */
-  PROTECT(callsxp=lang2( f, args));
-  PROTECT(resultsxp=eval(callsxp,rho));
+  PROTECT(callsxp=Rf_lang2( f, args));
+  PROTECT(resultsxp=Rf_eval(callsxp,rho));
   resxp = REAL(resultsxp)[0];
   UNPROTECT(3);
     } else {
@@ -780,12 +780,12 @@ methodAdapt::CalcR (const int poutput, int *dispfc,
 	      integre = False;
       // dispfc[0] ==0: dispersal functions in R
 	      if (dispfc[0] ==0) {
-	      PROTECT(args=allocVector(REALSXP, (2)));
+	      PROTECT(args=Rf_allocVector(REALSXP, (2)));
 	      REAL(args)[0]=lepoint.dist0()/SCALE;
 	      REAL(args)[1]=lepoint.angle0();
   /* Invoke the R function */
-  PROTECT(callsxp=lang2( f, args));
-  PROTECT(resultsxp=eval(callsxp,rho));
+  PROTECT(callsxp=Rf_lang2( f, args));
+  PROTECT(resultsxp=Rf_eval(callsxp,rho));
   resxp = REAL(resultsxp)[0];
   UNPROTECT(3);
 	    } else {

@@ -247,13 +247,13 @@ ReadCoord (FILE * fp,
 	  if ((fabs (lux) >= INT_MAX) || (fabs (luy) >= INT_MAX))
 	    {
 	      toobig = True;
-	      warning(
+	      Rf_warning(
 		       "Too big %dst coordinates in polygon %d: %g %g ",
 		       (isom + 1), numPoly[ipoly], lesx[isom], lesy[isom]);
 	      if (SCALE > 1)
-		warning( " (they will be multiplied by %g)",
+		Rf_warning( " (they will be multiplied by %g)",
 			 double (SCALE));
-	      warning( "\n");
+	      Rf_warning( "\n");
 
 	    }
 
